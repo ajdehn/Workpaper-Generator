@@ -1,2 +1,2 @@
 # Workpaper-Generator
-Tool to automaticall build audit work papers
+Tool to automatically build audit work papers
