@@ -15,6 +15,7 @@ def main():
 	for row_cells in ws.iter_rows(min_row=2):
 		controlObjective = row_cells[0].value
 		controlNumber = row_cells[1].value
+		controlNumber = str(round(controlNumber, 1))
 		controlDescription = row_cells[2].value
 		prepareOutputFile(controlObjective, controlNumber, controlDescription)
 	
@@ -37,8 +38,7 @@ def prepareOutputFile(controlObjective, controlNumber, controlDescription):
 	sumSheet["B5"] = controlDescription
 	
 	filePath = "%s/%s.xlsx" % (controlObjective, controlNumber)
-
-	print(filePath)
+	
 	# Save file to specified directory
 	output.save(filename=filePath)
 	
